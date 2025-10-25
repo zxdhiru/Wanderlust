@@ -11,6 +11,7 @@ const sampleListings = [
     price: 1500,
     location: "Malibu",
     country: "United States",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.1234567890123!2d-118.77975768478234!3d34.02592028060967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bb1234567890%3A0xabcdef1234567890!2sMalibu%2C%20CA%2090265%2C%20USA!5e0!3m2!1sen!2sin!4v1616161616161!5m2!1sen!2sin",
   },
   {
     title: "Modern Loft in Downtown",
@@ -24,6 +25,7 @@ const sampleListings = [
     price: 1200,
     location: "New York City",
     country: "United States",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12000.1234567890123!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1234567890%3A0xabcdef1234567890!2sNew%20York%2C%20NY%2010001%2C%20USA!5e0!3m2!1sen!2sin!4v1616161616161!5m2!1sen!2sin",
   },
   {
     title: "Mountain Retreat",
@@ -37,6 +39,7 @@ const sampleListings = [
     price: 1000,
     location: "Aspen",
     country: "United States",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12000.1234567890123!2d-106.8372!3d39.1911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c78901234567890%3A0xabcdef1234567890!2sAspen%2C%20CO%2081201%2C%20USA!5e0!3m2!1sen!2sin!4v1616161616161!5m2!1sen!2sin",
   },
   {
     title: "Historic Villa in Tuscany",
@@ -50,6 +53,7 @@ const sampleListings = [
     price: 2500,
     location: "Florence",
     country: "Italy",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12000.1234567890123!2d11.2558!3d43.7696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a1234567890%3A0xabcdef1234567890!2sFlorence%2C%20Metropolitan%20City%20of%20Florence%2C%20Italy!5e0!3m2!1sen!2sin!4v1616161616161!5m2!1sen!2sin",
   },
   {
     title: "Secluded Treehouse Getaway",
@@ -63,6 +67,7 @@ const sampleListings = [
     price: 800,
     location: "Portland",
     country: "United States",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12000.1234567890123!2d-122.6765!3d45.5231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a1234567890%3A0xabcdef1234567890!2sPortland%2C%20OR%2097204%2C%20USA!5e0!3m2!1sen!2sin!4v1616161616161!5m2!1sen!2sin",
   },
   {
     title: "Beachfront Paradise",
@@ -76,6 +81,7 @@ const sampleListings = [
     price: 2000,
     location: "Cancun",
     country: "Mexico",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12000.1234567890123!2d-86.8515!3d21.1619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4a1234567890%3A0xabcdef1234567890!2sCancun%2C%20Quintana%20Roo%2C%20Mexico!5e0!3m2!1sen!2sin!4v1616161616161!5m2!1sen!2sin",
   },
   {
     title: "Rustic Cabin by the Lake",

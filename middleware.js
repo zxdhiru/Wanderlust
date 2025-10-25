@@ -4,8 +4,9 @@ const ExpressError = require("./utils/ExpressError.js");
 const { listingSchema, reviewSchema } = require("./schema.js");
 
 module.exports.isLoggedIn = (req, res, next) => {
-    if(!req.isAuthenticated()) {
-      req.session.redirectUrl = req.originalUrl;
+  if (!req.isAuthenticated()) {
+    req.session.redirectUrl = req.originalUrl;
+    console.log(req.body);
     req.flash("error", "You must be logged in to create new listing!");
     return res.redirect("/login");
   }
@@ -20,7 +21,7 @@ module.exports.saveRedirectUrl = (req, res, next) => {
 };
 
 module.exports.isOwner = async (req, res, next) => {
-  let { id } = req.params;  // Get id from route params
+  let { id } = req.params; // Get id from route params
   let listing = await Listing.findById(id);
 
   if (!listing) {
@@ -36,14 +37,16 @@ module.exports.isOwner = async (req, res, next) => {
   next(); // Don't forget to call next() if owner is valid
 };
 
-module.exports.validateListing = async(req, res, next) => {
+module.exports.validateListing = async (req, res, next) => {
+  console.log("Validating listing...");
+  console.log(req.body);
   let { error } = listingSchema.validate(req.body);
-    if (error) {
-      let errMsg = error.details.map((el) => el.message).join(",");
-      throw new ExpressError(400, errMsg);
-    } else {
-      next();
-    }
+  if (error) {
+    let errMsg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(400, errMsg);
+  } else {
+    next();
+  }
 };
 
 module.exports.validateReview = (req, res, next) => {
@@ -55,9 +58,16 @@ module.exports.validateReview = (req, res, next) => {
     next();
   }
 };
+module.exports.logRequest = (req, res, next) => {
+  if (req.file) {
+    console.log("Uploaded File:", req.file);
+  }
+  console.log("Request Body:", req.body);
+  next();
+};
 
 module.exports.isReviewAuthor = async (req, res, next) => {
-  let { id, reviewId } = req.params;  
+  let { id, reviewId } = req.params;
   let review = await Review.findById(reviewId);
 
   if (!review) {
